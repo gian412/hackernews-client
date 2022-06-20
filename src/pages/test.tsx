@@ -24,7 +24,7 @@ import Link from 'next/link';
 
 const PAGE_SIZE = 20;
 
-const Home: NextPage<{ posts: HNItem[]; totalPosts: number; page: number }> = ({ posts, totalPosts, page }) => {
+const Test: NextPage<{ posts: HNItem[]; totalPosts: number; page: number }> = ({ posts, totalPosts, page }) => {
     const router = useRouter();
 
     const onLoadMore = (page: number) => {
@@ -71,8 +71,8 @@ const Home: NextPage<{ posts: HNItem[]; totalPosts: number; page: number }> = ({
                     <Heading as='h1' size='4xl'>
                         Hacker <span style={{ color: 'teal' }}>news</span>
                     </Heading>
-                    <Link href={'/test'}>
-                        <a>Go to test</a>
+                    <Link href={'/'}>
+                        <a>Go to home</a>
                     </Link>
 
                     <Flex direction='row' justify='space-between' align='center' width='100%' mt='12'>
@@ -138,4 +138,4 @@ export const getServerSideProps: GetServerSideProps = async context => {
     };
 };
 
-export default Home;
+export default Test;
